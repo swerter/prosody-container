@@ -17,6 +17,21 @@ and run it
          -p 5281:5281 \
          swerter/prosody
 
+## Very short intro to prosody
+Prosody is a jabber server. For the configuration, see [here](https://prosody.im/doc/configure). In short it boils down to 1) add a host (and its certificates) and 2) add users.
+
+### Add a host
+For testing you can use the commands that are provided by `prosodyctl`:
+
+    prosodyctl cert generate example.com
+
+### Add users
+
+Per default there are two users added to the docker container (see folder accounts where you find alice.dat and bob.dat) both with the password `abc`. If you want additional users you can for example run
+
+    prosodyctl adduser john@example.com
+
+and add the password twice.
 
 ## Production use
 
